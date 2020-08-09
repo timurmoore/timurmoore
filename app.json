@@ -1,7 +1,7 @@
 {
-  "name": "FRIDAY",
-  "description": "Userbot created by a @Mariodevs and join https://t.me/fridaySupportOfficial for any problems or support",
-  "logo": "https://telegra.ph/file/c3ba2e9b965f624936358.png",
+  "name": "MOORE",
+  "description": "Userbot createt",
+  "logo": "3b841f1fa25ad570dbd859b2f216f313b2859494",
     "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/STARKGANG/FridayUserbot/",
+  "repository": "https://github.com/timurmoore/timurmoore",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
