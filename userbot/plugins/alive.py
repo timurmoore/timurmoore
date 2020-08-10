@@ -8,11 +8,12 @@ from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/36ce364e55a7bcf17cd2d.jpg"
 pm_caption = " MOORE HELPER:` **ONLINE**\n\n"
-pm_caption += "**СИСТЕМНАЯ ИНФОРМАЦИЯ**\n"
-pm_caption += "`ВЕРСИЯ TELETHON:` **6.0.9**\n`Python:` **3.7.4**\n"
-pm_caption += "`БАЗА ДАННЫХ:` **В норме**\n"
-pm_caption += "**Текущий бранч** : `master`\n"
-pm_caption += "**Версия MOORE HELPER** : `3.14`\n"
+pm_caption += "**СТАТУС СИСТЕМЫ**\n"
+pm_caption += "`Версия TELETHON:` **6.0.9**\n`Версия Python:` **3.7.4**\n"
+pm_caption += "`База данных:` **В норме**\n"
+pm_caption += "**Директория** : `master`\n"
+pm_caption += "**MOORE HELPER OS** : `3.14`\n"
+pm_caption += "**Текущая настройка** : `-2.25`\n"
 pm_caption += f"**Мой Boss** : {DEFAULTUSER} \n"
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
