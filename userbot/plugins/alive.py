@@ -17,9 +17,6 @@ pm_caption += "**MOORE HELPER OS** : `3.14`\n"
 pm_caption += "**Current Sat** : `-2.25`\n"
 pm_caption += f"**My Boss** : {DEFAULTUSER} \n"
 pm_caption += "**Database** : `AWS - Working Properly`\n\n"
-pm_caption += "**License** : [MIT Licence](github.com/timurmoore/timurmoore/blob/master/LICENSE)\n"
-pm_caption += "Copyright : By [timurmoore@Github](GitHub.com/timurmoore)\n"
-pm_caption += " [@TIMURMOORE](https://t.me/timurmoore)"
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
