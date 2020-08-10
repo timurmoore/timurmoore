@@ -72,7 +72,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("Trying To Pull Updates !")
+        await message.edit("Запрашиваю обновления...")
         await asyncio.sleep(10)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -140,7 +140,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Trying To Restart Dyno To Finalize Updation Process ! \nYou Can Do `.alive` To Check If I am Alive !")
+    await message.edit("Перезапуск. \nОтправь `.alive` для проверки статуса.")
     remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
