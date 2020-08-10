@@ -7,14 +7,19 @@ from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/36ce364e55a7bcf17cd2d.jpg"
-pm_caption = " MOORE HELPER:` **ONLINE**\n\n"
-pm_caption += "**СТАТУС СИСТЕМЫ**\n"
-pm_caption += "`Версия TELETHON:` **6.0.9**\n`Версия Python:` **3.7.4**\n"
-pm_caption += "`База данных:` **В норме**\n"
-pm_caption += "**Директория** : `master`\n"
+
+pm_caption = "`MOORE HELPER:` **ONLINE**\n\n"
+pm_caption += "**SYSTEM STATUS**\n"
+pm_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
+pm_caption += "`DATABASE STATUS:` **Functional**\n"
+pm_caption += "**Current Branch** : `master`\n"
 pm_caption += "**MOORE HELPER OS** : `3.14`\n"
-pm_caption += "**Текущая настройка** : `-2.25`\n"
-pm_caption += f"**Мой Boss** : {DEFAULTUSER} \n"
+pm_caption += "**Current Sat** : `-2.25`\n"
+pm_caption += f"**My Boss** : {DEFAULTUSER} \n"
+pm_caption += "**Database** : `AWS - Working Properly`\n\n"
+pm_caption += "**License** : [MIT Licence](github.com/timurmoore/timurmoore/blob/master/LICENSE)\n"
+pm_caption += "Copyright : By [timurmoore@Github](GitHub.com/timurmoore)\n"
+pm_caption += " [@TIMURMOORE](https://t.me/timurmoore)"
 #@command(outgoing=True, pattern="^.alive$")
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
