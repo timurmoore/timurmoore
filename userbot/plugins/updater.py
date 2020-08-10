@@ -10,28 +10,28 @@ from userbot.utils import admin_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
-    "looks like a custom branch {branch_name} "
-    "is being used:\n"
-    "in this case, Updater is unable to identify the branch to be updated."
-    "please check out to an official branch, and re-start the updater."
+    "Выбрана директория {branch_name} "
+    "Будет использована:\n"
+    "Иначе я не смогу произвести обновление."
+    "Выбери корректную директорию и перезапусти бота."
 )
 OFFICIAL_UPSTREAM_REPO = "https://github.com/timurmoore/timurmoore"
-BOT_IS_UP_TO_DATE = "Friday userbot is up-to-date!"
+BOT_IS_UP_TO_DATE = "Бот уже обновлён!"
 NEW_BOT_UP_DATE_FOUND = (
-    "**Friday Update Found For** {branch_name}\n"
+    "**Найдено обновление для** {branch_name}\n"
     "\n\n{changelog}\n"
-    "Pulling Updates !!"
+    "Запрашиваю обновления..."
 )
 NEW_UP_DATE_FOUND = (
-    "**New update found for** {branch_name}\n"
-    "Updating And Restarting..."
+    "**Найдено обновление для** {branch_name}\n"
+    "Обновление и перезапуск..."
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
-DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "No heroku application found, but a key given?"
+DIFF_MARKER = "Директория..{remote_name}/{branch_name}"
+NO_HEROKU_APP_CFGD = "Ключ установлен? Проверь."
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "Re-Starting heroku application"
+RESTARTING_APP = "Перезапуск приложения."
 # -- Constants End -- #
 
 
@@ -109,7 +109,7 @@ async def updater(message):
                     if i.name == Var.HEROKU_APP_NAME:
                         heroku_app = i
                 if heroku_app is None:
-                    await message.edit("Invalid APP Name. Please set the name of your bot in heroku in the var HEROKU_APP_NAME.")
+                    await message.edit("Проверь имя приложения в настройках.")
                     return
                 heroku_git_url = heroku_app.git_url.replace(
                     "https://",
@@ -123,12 +123,12 @@ async def updater(message):
                 asyncio.get_event_loop().create_task(deploy_start(bot, message, HEROKU_GIT_REF_SPEC, remote))
 
             else:
-                await message.edit("Please create the var HEROKU_APP_NAME as the key and the name of your bot in heroku as your value.")
+                await message.edit("Создай переменную с именем приложения.")
                 return
         else:
             await message.edit(NO_HEROKU_APP_CFGD)
     else:
-        await message.edit("No heroku api key found in HEROKU_API_KEY var")
+        await message.edit("Ключ не найден в переменной приложения. Проверь.")
         
 
 def generate_change_log(git_repo, diff_marker):
