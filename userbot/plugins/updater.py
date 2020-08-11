@@ -28,10 +28,10 @@ NEW_UP_DATE_FOUND = (
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
-DIFF_MARKER = "Директория..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "Ключ установлен? Проверь."
+DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
+NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "Перезапуск приложения."
+RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
 
@@ -144,5 +144,3 @@ async def deploy_start(bot, message, refspec, remote):
     remote.push(refspec=refspec)
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
-
-    
